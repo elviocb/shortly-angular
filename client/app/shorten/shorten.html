@@ -1,6 +1,16 @@
 <div id='container'>
-<!-- Your code here -->
-askofakjfjdssdvsvsds
+	<form name="myForm" ng-submit='addLink()' ng-controller="ShortenController">
+	  <label>URL:
+	    <input type="url" name="input" ng-model="link.url" required>
+	  </label>
+	  <div role="alert">
+	    <span class="error" ng-show="myForm.input.$error.required">
+	      Required!</span>
+	    <span class="error" ng-show="myForm.input.$error.url">
+	      Not valid url!</span>
+	  </div>
+	  <input type="submit" value="Shorten">
+	</form>
 </div>
 
 
